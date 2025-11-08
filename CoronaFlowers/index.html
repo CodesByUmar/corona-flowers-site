@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Corona Flowers</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            background: #f9f9f9;
+        }
+
+        header {
+            background: #ff6b6b;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            padding: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        button {
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            margin-top: 0.5rem;
+            cursor: pointer;
+        }
+
+        #cart {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #333;
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Corona Flowers</h1>
+    </header>
+    <section class="products">
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200?text=Rose" alt="Rose">
+            <h3>Red Rose</h3>
+            <p>$25</p>
+            <button onclick="addToCart('Red Rose', 25)">Add to Cart</button>
+        </div>
+        <!-- Qo‘shimcha 2-3 ta card qo‘shing -->
+    </section>
+    <div id="cart">Cart: 0 items</div>
+
+    <script>
+        let cart = 0;
+        function addToCart(name, price) {
+            cart++;
+            document.getElementById('cart').innerText = `Cart: ${cart} items`;
+            alert(`${name} added!`);
+        }
+    </script>
+</body>
+
+</html>
