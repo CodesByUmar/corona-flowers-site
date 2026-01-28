@@ -1,4 +1,4 @@
-odamin
+rodamin
 # Corona Flowers – E-commerce Website
 > Real client project – 1 oyda qurilgan (2025)
 
